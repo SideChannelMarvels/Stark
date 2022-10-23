@@ -79,3 +79,27 @@ aes_keyschedule B1BA2737C83233FE7F7A7DF0FBB01D4A7835FA62BE9726A1BB39F261BAC4729C
 aes_keyschedule F2E96B6FD53C1BBB49D0990E6FF86927DF8F909C21310695C43D2751C133AC12 5
 aes_keyschedule 4D69A4975189FCA00DB0AC8F686EE58C033BE6307A3C13C226DF38591EEAC857 13
 ```
+
+### SM4
+
+SM4 key scheduling reverser can
+
+* print all round keys from the SM4 key;
+* print all round keys from any 4 consecutive intermediate or final round keys.
+
+Usage:
+
+```
+sm4_keyschedule SM4_key_in_hex
+sm4_keyschedule Round_keys_in_hex Initial_round_key_number_between_0_and_32
+```
+
+The SM4 key is first XORed with constants FKs, so we also display the value of the key itself.
+
+Example:
+
+```
+sm4_keyschedule 01234567 89ABCDEF 12345678 9ABCDEF0
+sm4_keyschedule FA3386F7 7814E4E0 37128B07 BB1231C6 23
+sm4_keyschedule C337204D D1C1C4AF 19237F5D AB6618FE 32
+```
