@@ -46,7 +46,7 @@
 /* For more information, please refer to <http://unlicense.org/>         */
 /* ===================================================================== */
 
-#include "DES.h"
+#include "DES.c"
 #include <inttypes.h>
 #include <stdlib.h>
 #include <stdio.h>
